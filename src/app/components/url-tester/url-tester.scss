@@ -1,0 +1,33 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+:host {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.tester {
+  @include panel;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 16px;
+
+  &__label {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  &__input {
+    flex: 1;
+    min-width: 240px;
+    padding: 7px 10px;
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    font: inherit;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+    @include focus-ring;
+  }
+}

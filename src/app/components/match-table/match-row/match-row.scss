@@ -1,0 +1,107 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+:host {
+  cursor: pointer;
+  @include focus-ring;
+
+  &:hover {
+    background: $color-row-hover;
+  }
+}
+
+:host(.row--selected) {
+  background: $color-accent-soft;
+}
+
+:host(.row--compact) .row__venue {
+  @include wide {
+    display: none;
+  }
+}
+
+td {
+  @include table-cell;
+}
+
+.row {
+  &__position {
+    width: 1%;
+    color: $color-muted;
+  }
+
+  &__warning {
+    color: $color-warn;
+    cursor: help;
+  }
+}
+
+// Home | score | away. Equal side columns keep the score in the same position on every row.
+.fixture {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: 8px;
+  white-space: nowrap;
+
+  &__team {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &--home {
+      text-align: right;
+    }
+
+    &--away {
+      text-align: left;
+    }
+  }
+
+  &__score {
+    min-width: 52px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: $color-text;
+    color: #fff;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+  }
+}
+
+.tag {
+  padding: 2px 7px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+
+  &--men {
+    background: $color-men;
+  }
+
+  &--women {
+    background: $color-women;
+  }
+
+  &--unknown {
+    background: none;
+    color: $color-muted;
+  }
+}
+
+.badge {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: $color-ok-bg;
+  color: $color-ok;
+  font-family: $font-mono;
+  font-size: 11px;
+  font-weight: 700;
+
+  &--aet,
+  &--pen {
+    background: $color-special-bg;
+    color: $color-special;
+  }
+}

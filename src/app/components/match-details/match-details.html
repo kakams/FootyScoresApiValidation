@@ -1,0 +1,61 @@
+@let m = match();
+@let r = m.response;
+
+<div class="details__head">
+  <div>
+    <h2 class="details__title">
+      {{ r.teams?.home ?? '—' }} {{ r.score?.home ?? '?' }}–{{ r.score?.away ?? '?' }} {{ r.teams?.away ?? '—' }}
+    </h2>
+    <div class="details__subtitle">{{ subtitle() }}</div>
+  </div>
+  <button class="details__close" type="button" aria-label="Close details" (click)="close()">✕</button>
+</div>
+
+<dl class="details__meta">
+  @if (m.source) {
+    <dt>Unit code</dt>
+    <dd><code>{{ m.code }}</code></dd>
+  } @else {
+    <dt>Origin</dt>
+    <dd>imported file — source data not available</dd>
+  }
+</dl>
+
+@if (m.source) {
+  <app-source-requests [match]="m" />
+}
+
+@if (m.warnings.length) {
+  <div class="details__notice">
+    <strong>{{ m.source ? 'Source data warnings' : 'Import warnings' }}</strong>
+    <ul class="details__notice-list">
+      @for (warning of m.warnings; track $index) {
+        <li>{{ warning }}</li>
+      }
+    </ul>
+  </div>
+}
+
+<div class="tabs" role="tablist">
+  @for (t of tabs(); track t.id) {
+    <button
+      class="tabs__tab"
+      type="button"
+      role="tab"
+      [class.tabs__tab--active]="t.id === tab()"
+      [attr.aria-selected]="t.id === tab()"
+      (click)="selectTab(t.id)"
+    >
+      {{ t.label }}
+    </button>
+  }
+</div>
+
+<div class="details__actions">
+  <app-copy-button [text]="contentText" />
+  @if (tab() === 'response') {
+    <button class="btn btn--small" type="button" (click)="downloadResponse()">Download</button>
+  }
+</div>
+
+<app-json-viewer [value]="content()" />

@@ -1,0 +1,5 @@
+// Global styles only: reset/base, buttons and utilities used by many components.
+// Component styles live next to each component; shared tokens/mixins are in src/styles.
+@use 'base';
+@use 'buttons';
+@use 'utilities';

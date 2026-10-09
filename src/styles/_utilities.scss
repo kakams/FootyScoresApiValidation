@@ -1,0 +1,10 @@
+@use 'variables' as *;
+
+.u-nowrap {
+  white-space: nowrap;
+}
+
+.u-muted {
+  color: $color-muted;
+  font-size: 12px;
+}

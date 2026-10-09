@@ -1,0 +1,21 @@
+<section class="requests" aria-label="Source requests">
+  <h3 class="requests__title">Source requests</h3>
+  <ul class="requests__list">
+    @for (request of requests(); track request.label) {
+      <li class="requests__item">
+        <div class="requests__head">
+          <span class="requests__label">
+            <span class="requests__method">GET</span> {{ request.label }}
+            <span class="requests__description">— {{ request.description }}</span>
+          </span>
+          <span class="requests__actions">
+            <app-copy-button label="Copy URL" [text]="request.url" [ariaLabel]="'Copy ' + request.label + ' URL'" />
+            <app-copy-button label="Copy curl" [text]="request.curl" [ariaLabel]="'Copy ' + request.label + ' as curl'" />
+            <a class="btn btn--small" [href]="request.url" target="_blank" rel="noopener">Open ↗</a>
+          </span>
+        </div>
+        <code class="requests__url">{{ request.url }}</code>
+      </li>
+    }
+  </ul>
+</section>

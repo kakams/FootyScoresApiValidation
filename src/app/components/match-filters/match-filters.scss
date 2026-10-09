@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+.filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+
+  &__control {
+    padding: 7px 10px;
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    background: $color-panel;
+    font: inherit;
+
+    &--search {
+      min-width: 240px;
+    }
+  }
+
+  &__count {
+    margin-left: auto;
+    color: $color-muted;
+  }
+}

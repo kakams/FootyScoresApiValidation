@@ -1,0 +1,31 @@
+<div class="table-wrap">
+  <table class="matches" [class.matches--compact]="compact()">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Kickoff (Paris)</th>
+        <th>Tournament</th>
+        <th>Round</th>
+        <th class="matches__fixture">Match</th>
+        <th class="matches__venue">Venue</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (match of store.visibleMatches(); track match.code) {
+        <tr
+          app-match-row
+          [match]="match"
+          [position]="positions().get(match.code) ?? 0"
+          [selected]="match.code === store.selectedCode()"
+          [compact]="compact()"
+          (picked)="store.toggleSelection(match.code)"
+        ></tr>
+      } @empty {
+        <tr>
+          <td class="matches__empty" colspan="7">No matches match the current filters.</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

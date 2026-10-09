@@ -1,0 +1,29 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.app {
+  max-width: $page-max-width;
+  margin: 0 auto;
+  padding: 0 20px 24px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+
+  &--with-details {
+    grid-template-columns: minmax(0, 1fr) minmax($details-min-width, 40%);
+
+    @include narrow {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}
+
+.footer {
+  margin-top: 16px;
+  color: $color-muted;
+  font-size: 12px;
+}

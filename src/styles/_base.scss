@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// The `hidden` attribute must always win over component display rules.
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  font: 14px/1.45 $font-sans;
+  background: $color-bg;
+  color: $color-text;
+}
+
+a {
+  color: $color-accent;
+}
+
+code {
+  font-family: $font-mono;
+  font-size: 12px;
+}

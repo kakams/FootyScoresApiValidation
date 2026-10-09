@@ -1,0 +1,40 @@
+// Design tokens shared by all partials.
+
+$color-bg: #f5f6f8;
+$color-panel: #ffffff;
+$color-text: #1c2330;
+$color-muted: #6b7486;
+$color-border: #e2e5eb;
+$color-header-bg: #fafbfc;
+$color-row-hover: #f8fafd;
+
+$color-accent: #0b6bcb;
+$color-accent-soft: #e7f1fb;
+$color-men: #0b6bcb;
+$color-women: #b4237a;
+
+$color-ok: #1e7f4f;
+$color-ok-bg: #e8f5ee;
+$color-special: #5b3cc4;
+$color-special-bg: #efe9fb;
+$color-warn: #9a6400;
+$color-warn-bg: #fff7e0;
+$color-err: #b42318;
+$color-err-bg: #fdecea;
+$color-err-border: #f5c2bd;
+
+$color-code-bg: #0f1720;
+$color-code-text: #d6dde8;
+$color-code-key: #8ab4f8;
+$color-code-string: #a8db8f;
+$color-code-number: #f6b26b;
+$color-code-literal: #e599f7;
+
+$font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+$font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+$radius: 8px;
+$radius-panel: 10px;
+$breakpoint-narrow: 900px;
+$page-max-width: 1500px;
+$details-min-width: 380px;

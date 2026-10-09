@@ -1,0 +1,18 @@
+@let selected = store.selected();
+
+<div class="app">
+  <app-header />
+  <app-url-tester />
+  <app-status-bar />
+
+  @if (store.hasData()) {
+    <app-match-filters />
+
+    <main class="layout" [class.layout--with-details]="selected">
+      <app-match-table [compact]="!!selected" />
+      @if (selected) {
+        <app-match-details [match]="selected" />
+      }
+    </main>
+  }
+</div>

@@ -1,0 +1,24 @@
+<section class="filters">
+  <select class="filters__control" aria-label="Tournament" [(ngModel)]="store.gender">
+    <option value="all">Men &amp; Women</option>
+    <option value="M">Men</option>
+    <option value="W">Women</option>
+  </select>
+
+  <select class="filters__control" aria-label="Round" [(ngModel)]="store.round">
+    <option value="all">All rounds</option>
+    @for (round of store.rounds(); track round) {
+      <option [value]="round">{{ round }}</option>
+    }
+  </select>
+
+  <input
+    class="filters__control filters__control--search"
+    type="search"
+    placeholder="Search team, venue, city…"
+    aria-label="Search"
+    [(ngModel)]="store.query"
+  />
+
+  <span class="filters__count">Showing {{ store.visibleMatches().length }} of {{ store.matches().length }}</span>
+</section>

@@ -1,0 +1,598 @@
+{
+ "schedules": [
+  {
+   "code": "FBLMTEAM11------------VICTMEDAL---",
+   "startDate": "2024-08-09T20:06:00+02:00",
+   "endDate": "2024-08-09T20:21:00+02:00",
+   "hideStartDate": false,
+   "order": 0,
+   "hideUnitNumber": false,
+   "discipline": {
+    "code": "FBL",
+    "eventorder": "DATE"
+   },
+   "eventUnit": {
+    "code": "FBLMTEAM11------------VICTMEDAL---",
+    "description": "Men's Victory Ceremony",
+    "longDescription": "Men's Victory Ceremony",
+    "shortDescription": "Victory Ceremony",
+    "type": "NONE",
+    "medal": 0,
+    "phase": {
+     "code": "FBLMTEAM11------------VICT",
+     "type": "6",
+     "order": "V",
+     "shortDescription": "Victory Ceremony",
+     "event": {
+      "code": "FBLMTEAM11------------",
+      "description": "Men"
+     }
+    }
+   },
+   "session": {
+    "code": "FBL57",
+    "startDate": "2024-08-09T18:00:00+02:00",
+    "endDate": "2024-08-09T21:30:00+02:00",
+    "sessionType": "EVE"
+   },
+   "status": {
+    "code": "RESCHEDULED",
+    "description": "Rescheduled"
+   },
+   "venue": {
+    "isCompetition": true,
+    "inOutDoor": " ",
+    "description": "Parc des Princes",
+    "longDescription": "Parc des Princes"
+   },
+   "location": {
+    "locationOrder": 7,
+    "description": "Parc des Princes, Paris",
+    "longDescription": "Parc des Princes, Paris",
+    "shortDescription": "Parc des Princes, Paris"
+   }
+  },
+  {
+   "code": "FBLWTEAM11------------FNL-000200--",
+   "nocs": [
+    "ESP",
+    "GER"
+   ],
+   "startDate": "2024-08-09T15:00:00+02:00",
+   "endDate": "2024-08-09T16:45:00+02:00",
+   "hideStartDate": false,
+   "order": 0,
+   "unitNum": "25",
+   "hideUnitNumber": false,
+   "start": [
+    {
+     "sortOrder": 1,
+     "startOrder": 1,
+     "teamCode": "FBLWTEAM11--ESP01",
+     "participant": {
+      "code": "FBLWTEAM11--ESP01",
+      "name": "Spain",
+      "shortName": "Spain",
+      "teamType": "ORG",
+      "organisation": {
+       "code": "ESP",
+       "description": "Spain",
+       "protocolOrder": 63,
+       "descriptionOrder": 1930,
+       "longDescriptionOrder": 1950
+      }
+     }
+    },
+    {
+     "sortOrder": 2,
+     "startOrder": 2,
+     "teamCode": "FBLWTEAM11--GER01",
+     "participant": {
+      "code": "FBLWTEAM11--GER01",
+      "name": "Germany",
+      "shortName": "Germany",
+      "teamType": "ORG",
+      "organisation": {
+       "code": "GER",
+       "description": "Germany",
+       "protocolOrder": 5,
+       "descriptionOrder": 790,
+       "longDescriptionOrder": 790
+      }
+     }
+    }
+   ],
+   "discipline": {
+    "code": "FBL",
+    "eventorder": "DATE"
+   },
+   "eventUnit": {
+    "code": "FBLWTEAM11------------FNL-000200--",
+    "resultRSC": "FBLWTEAM11------------FNL-000200--",
+    "description": "Women's Bronze Medal Match",
+    "longDescription": "Women's Bronze Medal Match",
+    "shortDescription": "Bronze Medal Match",
+    "type": "HTEAM",
+    "medal": 3,
+    "phase": {
+     "code": "FBLWTEAM11------------FNL-",
+     "type": "3",
+     "order": "1",
+     "shortDescription": "Finals",
+     "event": {
+      "code": "FBLWTEAM11------------",
+      "description": "Women"
+     }
+    }
+   },
+   "session": {
+    "code": "FBL56",
+    "startDate": "2024-08-09T15:00:00+02:00",
+    "endDate": "2024-08-09T18:00:00+02:00",
+    "sessionType": "LAF"
+   },
+   "status": {
+    "code": "FINISHED",
+    "description": "Finished"
+   },
+   "venue": {
+    "isCompetition": true,
+    "inOutDoor": " ",
+    "description": "Lyon Stadium",
+    "longDescription": "Lyon Stadium"
+   },
+   "location": {
+    "locationOrder": 4,
+    "description": "Lyon Stadium, Lyon",
+    "longDescription": "Lyon Stadium, Lyon",
+    "shortDescription": "Lyon Stadium, Lyon"
+   },
+   "result": {
+    "extendedInfos": [
+     {
+      "ei_code": "PERIOD",
+      "extended_info_code": "0",
+      "ei_type": "UI"
+     },
+     {
+      "ei_code": "UNIT_NUMBER",
+      "extended_info_code": "0",
+      "ei_type": "DISPLAY"
+     }
+    ],
+    "status": {
+     "code": "OFFICIAL",
+     "description": "Official"
+    },
+    "periods": [
+     {
+      "p_code": "H1",
+      "home": {
+       "score": "0",
+       "periodScore": "0"
+      },
+      "away": {
+       "score": "0",
+       "periodScore": "0"
+      }
+     },
+     {
+      "p_code": "H2",
+      "home": {
+       "score": "0",
+       "periodScore": "0"
+      },
+      "away": {
+       "score": "1",
+       "periodScore": "1"
+      }
+     },
+     {
+      "p_code": "TOT",
+      "home": {
+       "score": "0"
+      },
+      "away": {
+       "score": "1"
+      }
+     }
+    ],
+    "items": [
+     {
+      "sortOrder": 1,
+      "startSortOrder": 1,
+      "itemType": "T",
+      "resultType": "POINTS",
+      "resultWLT": "L",
+      "resultData": "0",
+      "resultDataText": "{\"result\":\"0\",\"wlt\":\"L\",\"hasIRM\":false}",
+      "eventUnitEntries": [
+       {
+        "eue_code": "HOME_AWAY",
+        "eue_type": "EUE",
+        "eue_value": "HOME"
+       },
+       {
+        "eue_code": "UNIFORM",
+        "eue_type": "EUE",
+        "eue_value": "Red",
+        "eue_pos": "1"
+       },
+       {
+        "eue_code": "SHORTS",
+        "eue_type": "EUE",
+        "eue_value": "Navy Blue"
+       },
+       {
+        "eue_code": "SOCKS",
+        "eue_type": "EUE",
+        "eue_value": "Red"
+       },
+       {
+        "eue_code": "FORMATION",
+        "eue_type": "EUE",
+        "eue_value": "4-1-2-3"
+       }
+      ],
+      "teamCode": "FBLWTEAM11--ESP01",
+      "participant": {
+       "code": "FBLWTEAM11--ESP01",
+       "name": "Spain",
+       "shortName": "Spain",
+       "__typename": "Team",
+       "teamType": "ORG",
+       "organisation": {
+        "code": "ESP",
+        "description": "Spain",
+        "longDescription": "Spain",
+        "protocolOrder": 63,
+        "descriptionOrder": 1930,
+        "longDescriptionOrder": 1950
+       }
+      }
+     },
+     {
+      "sortOrder": 2,
+      "startSortOrder": 2,
+      "itemType": "T",
+      "resultType": "POINTS",
+      "resultWLT": "W",
+      "resultData": "1",
+      "resultDataText": "{\"result\":\"1\",\"wlt\":\"W\",\"hasIRM\":false}",
+      "eventUnitEntries": [
+       {
+        "eue_code": "HOME_AWAY",
+        "eue_type": "EUE",
+        "eue_value": "AWAY"
+       },
+       {
+        "eue_code": "UNIFORM",
+        "eue_type": "EUE",
+        "eue_value": "White",
+        "eue_pos": "1"
+       },
+       {
+        "eue_code": "SHORTS",
+        "eue_type": "EUE",
+        "eue_value": "White"
+       },
+       {
+        "eue_code": "SOCKS",
+        "eue_type": "EUE",
+        "eue_value": "White"
+       },
+       {
+        "eue_code": "FORMATION",
+        "eue_type": "EUE",
+        "eue_value": "4-4-2"
+       }
+      ],
+      "teamCode": "FBLWTEAM11--GER01",
+      "participant": {
+       "code": "FBLWTEAM11--GER01",
+       "name": "Germany",
+       "shortName": "Germany",
+       "__typename": "Team",
+       "teamType": "ORG",
+       "organisation": {
+        "code": "GER",
+        "description": "Germany",
+        "longDescription": "Germany",
+        "protocolOrder": 5,
+        "descriptionOrder": 790,
+        "longDescriptionOrder": 790
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "code": "FBLMTEAM11------------FNL-000100--",
+   "nocs": [
+    "ESP",
+    "FRA"
+   ],
+   "startDate": "2024-08-09T18:00:00+02:00",
+   "endDate": "2024-08-09T19:45:00+02:00",
+   "hideStartDate": false,
+   "order": 0,
+   "unitNum": "32",
+   "hideUnitNumber": false,
+   "start": [
+    {
+     "sortOrder": 1,
+     "startOrder": 1,
+     "teamCode": "FBLMTEAM11--FRA01",
+     "participant": {
+      "code": "FBLMTEAM11--FRA01",
+      "name": "France",
+      "shortName": "France",
+      "teamType": "ORG",
+      "organisation": {
+       "code": "FRA",
+       "description": "France",
+       "protocolOrder": 70,
+       "descriptionOrder": 730,
+       "longDescriptionOrder": 740
+      }
+     }
+    },
+    {
+     "sortOrder": 2,
+     "startOrder": 2,
+     "teamCode": "FBLMTEAM11--ESP01",
+     "participant": {
+      "code": "FBLMTEAM11--ESP01",
+      "name": "Spain",
+      "shortName": "Spain",
+      "teamType": "ORG",
+      "organisation": {
+       "code": "ESP",
+       "description": "Spain",
+       "protocolOrder": 63,
+       "descriptionOrder": 1930,
+       "longDescriptionOrder": 1950
+      }
+     }
+    }
+   ],
+   "discipline": {
+    "code": "FBL",
+    "eventorder": "DATE"
+   },
+   "eventUnit": {
+    "code": "FBLMTEAM11------------FNL-000100--",
+    "resultRSC": "FBLMTEAM11------------FNL-000100--",
+    "description": "Men's Gold Medal Match",
+    "longDescription": "Men's Gold Medal Match",
+    "shortDescription": "Gold Medal Match",
+    "type": "HTEAM",
+    "medal": 1,
+    "phase": {
+     "code": "FBLMTEAM11------------FNL-",
+     "type": "3",
+     "order": "1",
+     "shortDescription": "Finals",
+     "event": {
+      "code": "FBLMTEAM11------------",
+      "description": "Men"
+     }
+    }
+   },
+   "session": {
+    "code": "FBL57",
+    "startDate": "2024-08-09T18:00:00+02:00",
+    "endDate": "2024-08-09T21:30:00+02:00",
+    "sessionType": "EVE"
+   },
+   "status": {
+    "code": "FINISHED",
+    "description": "Finished"
+   },
+   "venue": {
+    "isCompetition": true,
+    "inOutDoor": " ",
+    "description": "Parc des Princes",
+    "longDescription": "Parc des Princes"
+   },
+   "location": {
+    "locationOrder": 7,
+    "description": "Parc des Princes, Paris",
+    "longDescription": "Parc des Princes, Paris",
+    "shortDescription": "Parc des Princes, Paris"
+   },
+   "result": {
+    "extendedInfos": [
+     {
+      "ei_code": "PERIOD",
+      "extended_info_code": "0",
+      "ei_type": "UI"
+     },
+     {
+      "ei_code": "RES_CODE",
+      "extended_info_code": "0",
+      "ei_type": "UI"
+     },
+     {
+      "ei_code": "UNIT_NUMBER",
+      "extended_info_code": "0",
+      "ei_type": "DISPLAY"
+     },
+     {
+      "ei_code": "ATTENDANCE",
+      "extended_info_code": "0",
+      "ei_type": "DISPLAY"
+     }
+    ],
+    "status": {
+     "code": "OFFICIAL",
+     "description": "Official"
+    },
+    "periods": [
+     {
+      "p_code": "H1",
+      "home": {
+       "score": "1",
+       "periodScore": "1"
+      },
+      "away": {
+       "score": "3",
+       "periodScore": "3"
+      }
+     },
+     {
+      "p_code": "H2",
+      "home": {
+       "score": "3",
+       "periodScore": "2"
+      },
+      "away": {
+       "score": "3",
+       "periodScore": "0"
+      }
+     },
+     {
+      "p_code": "ET-H1",
+      "home": {
+       "score": "3",
+       "periodScore": "0"
+      },
+      "away": {
+       "score": "4",
+       "periodScore": "1"
+      }
+     },
+     {
+      "p_code": "ET-H2",
+      "home": {
+       "score": "3",
+       "periodScore": "0"
+      },
+      "away": {
+       "score": "5",
+       "periodScore": "1"
+      }
+     },
+     {
+      "p_code": "TOT",
+      "home": {
+       "score": "3"
+      },
+      "away": {
+       "score": "5"
+      }
+     }
+    ],
+    "items": [
+     {
+      "sortOrder": 1,
+      "startSortOrder": 1,
+      "itemType": "T",
+      "resultType": "POINTS",
+      "resultWLT": "L",
+      "resultData": "3",
+      "resultDataText": "{\"result\":\"3\",\"wlt\":\"L\",\"extra\":{\"aet\":\"AET\"},\"hasIRM\":false}",
+      "eventUnitEntries": [
+       {
+        "eue_code": "HOME_AWAY",
+        "eue_type": "EUE",
+        "eue_value": "HOME"
+       },
+       {
+        "eue_code": "UNIFORM",
+        "eue_type": "EUE",
+        "eue_value": "Navy Blue",
+        "eue_pos": "1"
+       },
+       {
+        "eue_code": "SHORTS",
+        "eue_type": "EUE",
+        "eue_value": "White"
+       },
+       {
+        "eue_code": "SOCKS",
+        "eue_type": "EUE",
+        "eue_value": "Red"
+       },
+       {
+        "eue_code": "FORMATION",
+        "eue_type": "EUE",
+        "eue_value": "4-1-2-1-2"
+       }
+      ],
+      "teamCode": "FBLMTEAM11--FRA01",
+      "participant": {
+       "code": "FBLMTEAM11--FRA01",
+       "name": "France",
+       "shortName": "France",
+       "__typename": "Team",
+       "teamType": "ORG",
+       "organisation": {
+        "code": "FRA",
+        "description": "France",
+        "longDescription": "France",
+        "protocolOrder": 70,
+        "descriptionOrder": 730,
+        "longDescriptionOrder": 740
+       }
+      }
+     },
+     {
+      "sortOrder": 2,
+      "startSortOrder": 2,
+      "itemType": "T",
+      "resultType": "POINTS",
+      "resultWLT": "W",
+      "resultData": "5",
+      "resultDataText": "{\"result\":\"5\",\"wlt\":\"W\",\"extra\":{\"aet\":\"AET\"},\"hasIRM\":false}",
+      "eventUnitEntries": [
+       {
+        "eue_code": "HOME_AWAY",
+        "eue_type": "EUE",
+        "eue_value": "AWAY"
+       },
+       {
+        "eue_code": "UNIFORM",
+        "eue_type": "EUE",
+        "eue_value": "Yellow/Grey",
+        "eue_pos": "2"
+       },
+       {
+        "eue_code": "SHORTS",
+        "eue_type": "EUE",
+        "eue_value": "Yellow/Red"
+       },
+       {
+        "eue_code": "SOCKS",
+        "eue_type": "EUE",
+        "eue_value": "Yellow"
+       },
+       {
+        "eue_code": "FORMATION",
+        "eue_type": "EUE",
+        "eue_value": "4-2-3-1"
+       }
+      ],
+      "teamCode": "FBLMTEAM11--ESP01",
+      "participant": {
+       "code": "FBLMTEAM11--ESP01",
+       "name": "Spain",
+       "shortName": "Spain",
+       "__typename": "Team",
+       "teamType": "ORG",
+       "organisation": {
+        "code": "ESP",
+        "description": "Spain",
+        "longDescription": "Spain",
+        "protocolOrder": 63,
+        "descriptionOrder": 1930,
+        "longDescriptionOrder": 1950
+       }
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,113 @@
+@let phase = store.phase();
+
+<section class="status" [class]="'status--' + phase">
+  @switch (phase) {
+    @case ('idle') {
+      <div class="status__empty status__empty--large">
+        <strong>No data loaded yet.</strong>
+        Click <em>Load data</em> to fetch the Paris 2024 football schedule and generate the expected API responses,
+        <em>Import JSON</em> to review a previously exported file, or paste a single match data URL above and click
+        <em>Test</em>.
+      </div>
+    }
+
+    @case ('loading') {
+      @let progress = store.progress();
+      <div class="status__spinner" aria-hidden="true"></div>
+      @if (store.origin().kind === 'url' && !progress.total) {
+        <span>Testing URL…</span>
+        <progress class="status__progress"></progress>
+      } @else if (progress.total) {
+        <span>Loading match data… {{ progress.done }} / {{ progress.total }}</span>
+        <progress class="status__progress" [max]="progress.total" [value]="progress.done"></progress>
+      } @else {
+        <span>Loading competition schedule…</span>
+        <progress class="status__progress"></progress>
+      }
+    }
+
+    @case ('error') {
+      @let error = store.error();
+      <div>
+        <strong>{{ error?.title }}</strong>
+        {{ error?.message }}
+        @if (error?.issues?.length) {
+          <ul class="status__list status__list--scroll">
+            @for (issue of error?.issues; track $index) {
+              <li><code>{{ issue }}</code></li>
+            }
+          </ul>
+        }
+      </div>
+      @if (canRetry()) {
+        <button class="btn" type="button" (click)="store.retry()">Try again</button>
+      }
+    }
+
+    @case ('ready') {
+      @if (isEmpty()) {
+        <div class="status__empty"><strong>No football matches found</strong> in the schedule feed.</div>
+      } @else {
+        @let origin = store.origin();
+        @if (origin.kind === 'url') {
+          <div [class.status__success]="!store.failures().length">
+            @if (store.failures().length) {
+              <strong>URL test: {{ store.matches().length }} match(es) parsed, {{ store.failures().length }} failed.</strong>
+            } @else {
+              <strong>✓ URL test passed</strong> —
+              @if (testedSchedule()) {
+                {{ store.matches().length }} match(es) listed in the schedule response were parsed and the fields found
+                were validated against the expected JSON format.
+              } @else {
+                the response was parsed and validated against the expected JSON format.
+              }
+            }
+            <code class="status__url">{{ origin.url }}</code>
+          </div>
+        } @else {
+        <div>
+          <strong>{{ store.matches().length }} matches {{ origin.kind === 'file' ? 'imported' : 'generated' }}</strong>
+          — {{ menCount() }} men's, {{ womenCount() }} women's ·
+          @if (origin.kind === 'file') {
+            from file {{ origin.name }}.
+          } @else {
+            from the official Paris 2024 schedule.
+          }
+        </div>
+        }
+
+        @for (notice of store.notices(); track $index) {
+          <div class="status__warning">⚠ {{ notice }}</div>
+        }
+
+        @if (warningCount()) {
+          <div class="status__warning">
+            ⚠ {{ warningCount() }} match(es) have data warnings — click a row to inspect.
+            <button
+              class="btn btn--small"
+              type="button"
+              [attr.aria-pressed]="store.warningsOnly()"
+              (click)="store.warningsOnly.set(!store.warningsOnly())"
+            >
+              {{ store.warningsOnly() ? 'Show all matches' : 'Show only these' }}
+            </button>
+          </div>
+        }
+
+        @if (store.failures().length) {
+          <div class="status__failures">
+            <strong>{{ store.failures().length }} match(es) failed — export is disabled.</strong>
+            <ul class="status__list">
+              @for (failure of store.failures(); track failure.code) {
+                <li><code>{{ failure.code }}</code> — {{ failure.message }}</li>
+              }
+            </ul>
+            @if (origin.kind === 'feed') {
+              <button class="btn" type="button" (click)="store.retryFailed()">Retry failed</button>
+            }
+          </div>
+        }
+      }
+    }
+  }
+</section>

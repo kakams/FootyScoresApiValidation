@@ -1,0 +1,39 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+:host {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.json-viewer {
+  flex: 1;
+  margin: 0;
+  padding: 12px;
+  border-radius: $radius;
+  background: $color-code-bg;
+  color: $color-code-text;
+  font: 12px/1.5 $font-mono;
+  overflow: auto;
+
+  @include narrow {
+    max-height: 70vh;
+  }
+
+  &__key {
+    color: $color-code-key;
+  }
+
+  &__string {
+    color: $color-code-string;
+  }
+
+  &__number {
+    color: $color-code-number;
+  }
+
+  &__literal {
+    color: $color-code-literal;
+  }
+}

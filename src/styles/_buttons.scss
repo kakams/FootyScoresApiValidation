@@ -1,0 +1,40 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  background: $color-panel;
+  color: $color-text;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  @include focus-ring;
+
+  &:hover:not(:disabled) {
+    border-color: $color-accent;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    background: $color-accent;
+    border-color: $color-accent;
+    color: #fff;
+
+    &:hover:not(:disabled) {
+      filter: brightness(1.08);
+    }
+  }
+
+  &--small {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+}

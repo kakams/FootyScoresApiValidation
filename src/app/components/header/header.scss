@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px 0 16px;
+
+  &__title {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  &__subtitle {
+    margin: 2px 0 0;
+    color: $color-muted;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 8px;
+  }
+}

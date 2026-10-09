@@ -1,0 +1,41 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.table-wrap {
+  @include panel;
+  overflow: auto;
+}
+
+.matches {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    @include table-cell;
+    position: sticky;
+    top: 0;
+    background: $color-header-bg;
+    color: $color-muted;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    &.matches__fixture {
+      text-align: center;
+    }
+  }
+
+  // Venue makes room for the details panel on wide screens (on narrow ones the panel sits below the table).
+  &--compact &__venue {
+    @include wide {
+      display: none;
+    }
+  }
+
+  &__empty {
+    @include table-cell;
+    padding: 24px;
+    color: $color-muted;
+    text-align: center;
+  }
+}

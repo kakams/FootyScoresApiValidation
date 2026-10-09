@@ -1,0 +1,14 @@
+<form class="tester" (ngSubmit)="test()">
+  <label class="tester__label" for="url-tester-input">Test a match URL</label>
+  <input
+    id="url-tester-input"
+    class="tester__input"
+    type="url"
+    name="url"
+    autocomplete="off"
+    spellcheck="false"
+    [placeholder]="placeholder"
+    [(ngModel)]="url"
+  />
+  <button class="btn btn--primary" type="submit" [disabled]="!canTest()">Test</button>
+</form>

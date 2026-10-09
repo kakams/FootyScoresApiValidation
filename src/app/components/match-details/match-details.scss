@@ -1,0 +1,106 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+:host {
+  @include panel;
+  position: sticky;
+  top: 12px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 24px);
+  padding: 14px 16px;
+  overflow: hidden;
+
+  @include narrow {
+    position: static;
+    max-height: none;
+  }
+}
+
+.details {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 17px;
+  }
+
+  &__subtitle {
+    color: $color-muted;
+    font-size: 12px;
+  }
+
+  &__close {
+    border: 0;
+    background: none;
+    color: $color-muted;
+    font-size: 16px;
+    cursor: pointer;
+    @include focus-ring;
+  }
+
+  &__meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2px 12px;
+    margin: 10px 0;
+    font-size: 12px;
+
+    dt {
+      color: $color-muted;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+
+  &__notice {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: $radius;
+    background: $color-warn-bg;
+    color: $color-warn;
+    font-size: 13px;
+  }
+
+  &__notice-list {
+    margin: 4px 0 0;
+    padding-left: 18px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin: 8px 0;
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid $color-border;
+
+  &__tab {
+    padding: 6px 10px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: none;
+    color: $color-muted;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    @include focus-ring;
+
+    &--active {
+      border-bottom-color: $color-accent;
+      color: $color-accent;
+      font-weight: 600;
+    }
+  }
+}

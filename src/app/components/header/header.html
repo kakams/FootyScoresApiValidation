@@ -1,0 +1,32 @@
+<header class="header">
+  <div>
+    <h1 class="header__title">FootyScores API tester</h1>
+  </div>
+
+  <div class="header__actions">
+    <button class="btn btn--primary" type="button" [disabled]="busy()" (click)="load()">
+      {{ 'Load data from stacy.olympics.com' }}
+    </button>
+
+    <button
+      class="btn"
+      type="button"
+      title="Load a JSON file previously exported by this app"
+      [disabled]="busy()"
+      (click)="fileInput.click()"
+    >
+      Import JSON
+    </button>
+    <input #fileInput type="file" accept=".json,application/json" hidden (change)="import(fileInput)" />
+
+    <button
+      class="btn"
+      type="button"
+      [disabled]="!store.canExport()"
+      [title]="exportBlocked() ? 'Some matches failed to load — retry them before exporting' : ''"
+      (click)="exportAll()"
+    >
+      Export JSON@if (store.hasData()) { ({{ store.matches().length }})}
+    </button>
+  </div>
+</header>

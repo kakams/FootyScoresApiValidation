@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+// Shared visual building block for panels (status bar, table, details).
+@mixin panel {
+  background: $color-panel;
+  border: 1px solid $color-border;
+  border-radius: $radius-panel;
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 2px;
+  }
+}
+
+// Header and body cells live in different components, so their common look is shared here.
+@mixin table-cell {
+  padding: 8px 10px;
+  border-bottom: 1px solid $color-border;
+  text-align: left;
+  vertical-align: middle;
+}
+
+@mixin narrow {
+  @media (max-width: $breakpoint-narrow) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: $breakpoint-narrow + 1) {
+    @content;
+  }
+}

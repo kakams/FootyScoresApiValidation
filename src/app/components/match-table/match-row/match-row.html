@@ -1,0 +1,33 @@
+@let r = response();
+
+<td class="row__position">{{ position() }}</td>
+<td class="u-nowrap">{{ kickoff() }}</td>
+<td>
+  @if (tournament(); as t) {
+    <span class="tag" [class]="t.modifier">{{ t.label }}</span>
+  } @else {
+    <span class="tag tag--unknown">—</span>
+  }
+</td>
+<td>{{ r.competition?.round ?? '—' }}</td>
+<td>
+  <div class="fixture">
+    <span class="fixture__team fixture__team--home" [title]="r.teams?.home ?? ''">{{ r.teams?.home ?? '—' }}</span>
+    <span class="fixture__score">{{ r.score?.home ?? '?' }} – {{ r.score?.away ?? '?' }}</span>
+    <span class="fixture__team fixture__team--away" [title]="r.teams?.away ?? ''">{{ r.teams?.away ?? '—' }}</span>
+  </div>
+</td>
+<td class="row__venue">
+  {{ r.venue?.name ?? '—' }}
+  <div class="u-muted">{{ r.venue?.city }}</div>
+</td>
+<td class="u-nowrap">
+  @if (r.status) {
+    <span class="badge" [class]="'badge--' + r.status.toLowerCase()">{{ r.status }}</span>
+  } @else {
+    <span class="badge">—</span>
+  }
+  @if (warnings()) {
+    <span class="row__warning" [title]="warnings()">⚠</span>
+  }
+</td>
